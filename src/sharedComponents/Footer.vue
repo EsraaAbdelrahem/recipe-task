@@ -261,10 +261,6 @@
       background-color: @white;
       height: 20px;
       line-height: 20px;
-      //   font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue",
-      //     "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman",
-      //     "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial",
-      //     sans-serif;
       font-size: @font-size;
       width: 245px;
     }

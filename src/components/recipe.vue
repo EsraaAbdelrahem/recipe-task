@@ -5,9 +5,7 @@
         <h1>
           <b>{{ recipe.name }}</b>
         </h1>
-        <p class="mb-2">
-          with Tzatziki &amp; Warm Farro Salad
-        </p>
+        <p class="mb-2">with Tzatziki &amp; Warm Farro Salad</p>
         <img src="../assets/clock.svg" />
         <span class="total-time">50 min</span>
       </div>
@@ -25,15 +23,10 @@
         </div>
         <span class="view-all">View All</span>
       </div>
-      <!-- current working -->
       <div class="recipe-description">
         <p class="description">
           {{ recipe.description }}
-          <!-- <strong>TECHNIQUE TO HIGHLIGHT</strong> Cutting a 4-inch-long slit
-          through the center of the pork creates a sturdy “pocket” for the
-          savory filling.<br /><strong>WHY WE LOVE THIS RECIPE </strong>It’s
-          brimming with bright, bold Mediterranean flavors thanks to herby
-          za’atar, fresh oregano, and creamy tzatziki (or cucumber yogurt).--> <br /> 
+          <br />
           <a
             href="https://media.blueapron.com/recipes/23708/c_card_pdfs/1585748626-33-0012-8842/2PRE12_StuffedPork_WEB.pdf"
           >
@@ -45,14 +38,15 @@
         </a>
       </div>
     </div>
-    <!-- photo section -->
     <div class="recipe-photo">
       <img
         class="img-max"
         alt="Spinach &amp; Goat Cheese-Stuffed Pork Roast with Tzatziki &amp; Warm Farro Salad"
         src="https://media.blueapron.com/recipes/23708/square_newsletter_images/1583445863-33-0071-8483/0406_2P12_Stuffed-Pork_076_Web_SQ_hi_res.jpg?quality=80&amp;width=600"
       />
-      <span class="premium"><b>Premium</b></span>
+      <span class="premium">
+        <b>Premium</b>
+      </span>
     </div>
   </div>
 </template>

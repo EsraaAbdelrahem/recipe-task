@@ -18,6 +18,14 @@
           />
           <span>{{ errors[0] }}</span>
         </validation-provider>
+        <input
+          v-model="user.phone"
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="123-45-678"
+          required
+        />
       </div>
       <div class="form-group">
         <validation-provider rules="required" v-slot="{ errors }">
@@ -41,7 +49,9 @@
           <label class="password-label">Forget Password?</label>
         </div>
       </div>
-      <button type="submit" class="btn" @click="doLogin()">
+      <button type="submit" class="btn" @click="
+          doLogin()
+        ">
         <router-link to="/recipe">LOG IN</router-link>
       </button>
       <div class="form-divider">
@@ -67,6 +77,15 @@
 import { mapGetters, mapActions } from "vuex";
 import router from "../router";
 export default {
+  data: function() {
+    return {
+      user: {
+        email: "",
+        phone: "",
+        password: ""
+      }
+    };
+  },
   computed: {
     ...mapGetters({
       user: "User/user"
@@ -77,11 +96,12 @@ export default {
       doUserLogin: "User/doLogin"
     }),
     doLogin() {
-      this.doUserLogin();
-    },
-    navigate() {
+      this.doUserLogin(this.user);
       router.push({ name: "recipePage" });
     }
+    // navigate() {
+    //   router.replace({ name: "recipePage" });
+    // }
   }
 };
 </script>

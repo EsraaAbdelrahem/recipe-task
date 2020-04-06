@@ -1,10 +1,5 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <s-header></s-header>
-      <login-page></login-page>
-      <s-footer></s-footer>
-    </div>
     <router-view />
   </div>
 </template>
