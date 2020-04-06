@@ -88,9 +88,6 @@ export default {
       this.doUserLogin();
       router.push({ name: "recipePage" });
     }
-    // navigate() {
-    //   router.replace({ name: "recipePage" });
-    // }
   }
 };
 </script>
