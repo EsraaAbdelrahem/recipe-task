@@ -75,15 +75,6 @@
 import { mapGetters, mapActions } from "vuex";
 import router from "../router";
 export default {
-  // data: function() {
-  //   return {
-  //     user: {
-  //       email: "",
-  //       phone: "",
-  //       password: ""
-  //     }
-  //   };
-  // },
   computed: {
     ...mapGetters({
       user: "User/user"
