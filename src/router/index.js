@@ -14,7 +14,8 @@ const routes = [
   {
     path: "/recipe",
     name: "recipePage",
-    component: recipePage
+    component: recipePage,
+    meta: { requireAuth: true }
   }
 ];
 
