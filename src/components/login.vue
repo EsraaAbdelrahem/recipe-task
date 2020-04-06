@@ -49,10 +49,8 @@
           <label class="password-label">Forget Password?</label>
         </div>
       </div>
-      <button type="submit" class="btn" @click="
-          doLogin()
-        ">
-        <router-link to="/recipe">LOG IN</router-link>
+      <button type="submit" class="btn" @click="doLogin()">
+        LOG IN
       </button>
       <div class="form-divider">
         <div class="txt-box">
@@ -77,15 +75,15 @@
 import { mapGetters, mapActions } from "vuex";
 import router from "../router";
 export default {
-  data: function() {
-    return {
-      user: {
-        email: "",
-        phone: "",
-        password: ""
-      }
-    };
-  },
+  // data: function() {
+  //   return {
+  //     user: {
+  //       email: "",
+  //       phone: "",
+  //       password: ""
+  //     }
+  //   };
+  // },
   computed: {
     ...mapGetters({
       user: "User/user"
@@ -96,7 +94,7 @@ export default {
       doUserLogin: "User/doLogin"
     }),
     doLogin() {
-      this.doUserLogin(this.user);
+      this.doUserLogin();
       router.push({ name: "recipePage" });
     }
     // navigate() {
