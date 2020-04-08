@@ -8,8 +8,7 @@ export default {
   state: {
     user: {
       phone: "",
-      password: "",
-      email: "esraa@gmail.com"
+      password: ""
     }
   },
   getters: {
@@ -30,6 +29,9 @@ export default {
         .post("https://chif-elhana.herokuapp.com/api/v1/login", { user })
         .then(res => {
           console.log(res);
+        })
+        .catch(error => {
+          console.log(error);
         });
     }
   }

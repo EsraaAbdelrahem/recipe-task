@@ -8,7 +8,7 @@
         <label for="exampleInputEmail1">
           <b>EMAIL</b>
         </label>
-        <validation-provider name="email" rules="email" v-slot="{ errors }">
+        <!-- <validation-provider name="email" rules="email" v-slot="{ errors }">
           <input
             v-model="user.email"
             type="email"
@@ -16,8 +16,8 @@
             id="exampleInputEmail1"
             placeholder="Enter email"
           />
-          <span>{{ errors[0] }}</span>
-        </validation-provider>
+          <span>{{ errors[0] }}</span> 
+        </validation-provider> -->
         <input
           v-model="user.phone"
           type="tel"
@@ -49,7 +49,7 @@
           <label class="password-label">Forget Password?</label>
         </div>
       </div>
-      <button type="submit" class="btn" @click="doLogin()">
+      <button type="submit" class="btn" @click="Login()">
         LOG IN
       </button>
       <div class="form-divider">
@@ -84,7 +84,7 @@ export default {
     ...mapActions({
       doUserLogin: "User/doLogin"
     }),
-    doLogin() {
+    Login() {
       this.doUserLogin();
       router.push({ name: "recipePage" });
     }
