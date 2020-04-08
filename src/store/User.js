@@ -24,9 +24,12 @@ export default {
     }
   },
   actions: {
-    doLogin(user) {
+    doLogin() {
       return axios
-        .post("https://chif-elhana.herokuapp.com/api/v1/login", { user })
+        .post("https://chif-elhana.herokuapp.com/api/v1/login", {
+          phone: "",
+          password: ""
+        })
         .then(res => {
           console.log(res);
         })
