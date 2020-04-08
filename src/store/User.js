@@ -27,8 +27,8 @@ export default {
     doLogin() {
       return axios
         .post("https://chif-elhana.herokuapp.com/api/v1/login", {
-          phone: "",
-          password: ""
+          phone: this.user.phone,
+          password: this.user.password
         })
         .then(res => {
           console.log(res);
