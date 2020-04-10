@@ -18,20 +18,17 @@ export default {
   },
   mutations: {
     ["SET_USER_DATA"](state, user) {
-      state.user = user.data;
+      state.user = user;
 
       return user;
     }
   },
   actions: {
-    doLogin() {
+    doLogin({ commit }, user) {
       return axios
-        .post("https://chif-elhana.herokuapp.com/api/v1/login", {
-          phone: this.user.phone,
-          password: this.user.password
-        })
-        .then(res => {
-          console.log(res);
+        .post("https://chif-elhana.herokuapp.com/api/v1/login", user)
+        .then(data => {
+          commit("SET_USER_DATA", data);
         })
         .catch(error => {
           console.log(error);

@@ -17,7 +17,7 @@
             placeholder="Enter email"
           />
           <span>{{ errors[0] }}</span> 
-        </validation-provider> -->
+        </validation-provider>-->
         <input
           v-model="user.phone"
           type="tel"
@@ -49,9 +49,7 @@
           <label class="password-label">Forget Password?</label>
         </div>
       </div>
-      <button type="submit" class="btn" @click="Login()">
-        LOG IN
-      </button>
+      <button type="submit" class="btn" @click="Login">LOG IN</button>
       <div class="form-divider">
         <div class="txt-box">
           <span>or</span>
@@ -74,6 +72,7 @@
 <script>
 import { mapGetters, mapActions } from "vuex";
 import router from "../router";
+
 export default {
   computed: {
     ...mapGetters({
@@ -85,7 +84,8 @@ export default {
       doUserLogin: "User/doLogin"
     }),
     Login() {
-      this.doUserLogin();
+      event.preventDefault();
+      this.doUserLogin(this.user);
       router.push({ name: "recipePage" });
     }
   }
